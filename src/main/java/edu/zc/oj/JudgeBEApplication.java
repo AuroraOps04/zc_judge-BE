@@ -1,5 +1,6 @@
 package edu.zc.oj;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
+@MapperScan("edu.zc.oj.mapper")
 public class JudgeBEApplication {
     public static void main(String[] args) {
         SpringApplication.run(JudgeBEApplication.class, args);
