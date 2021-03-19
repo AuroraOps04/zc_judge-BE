@@ -15,6 +15,6 @@ import lombok.ToString;
 @Data
 @ToString
 public class Role {
-    private int id;
+    private Integer id;
     private String name;
 }

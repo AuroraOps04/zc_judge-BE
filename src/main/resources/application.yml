@@ -1,9 +1,11 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://rm-bp1yy56tku4lrz2shko.mysql.rds.aliyuncs.com:3306/db_zcoj
     username: dba_zcoj001
-    password: ${password}
+    password: ${oj.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  typeAliasesPackage: edu.zc.oj.entity
 logging:
-  level:
-    edu.zc.oj: debug
+    level:
+      edu.zc.oj: debug

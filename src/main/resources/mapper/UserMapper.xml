@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.zc.oj.mapper.UserMapper">
+    <resultMap id="baseUser" type="edu.zc.oj.entity.User">
+        <id property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="email" column="email" />
+        <result property="phone" column="phone" />
+        <result property="studentNo" column="student_no" />
+        <result property="isDisable" column="is_disable" />
+        <result property="createAt" column="create_at" />
+        <result property="avatar" column="avatar" />
+        <association property="role" column="role_id" javaType="edu.zc.oj.entity.Role" select="edu.zc.oj.mapper.RoleMapper.selectById" />
+    </resultMap>
+
+
+    <insert id="register"  useGeneratedKeys="true" keyProperty="id" parameterType="edu.zc.oj.entity.vo.RegisterForm">
+        insert into `user` (`email`, ${accountType}, `password`) values (#{email}, #{account}, #{password})
+
+    </insert>
+    <select id="findByAccount" resultType="edu.zc.oj.entity.User">
+        select * from `user` where ${accountType} = #{account}
+    </select>
+    <select id="login" resultMap="baseUser">
+        select * from `user` where ${accountType} = #{account} and `password` = #{password}
+    </select>
+</mapper>
