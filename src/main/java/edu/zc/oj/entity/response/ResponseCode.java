@@ -12,6 +12,7 @@ public enum ResponseCode {
     SUCCESS(200, "ok"),
     PARAMS_ERROR(400, "Incorrect request parameter"),
     NOT_FOUND(404, "not found"),
+    Unauthorized(401, "Unauthorized"),
     SERVER_ERROR(500, "server error"),
     INSERT_SUCCESS(201, "insert success"),
     METHOD_NOT_SUPPORTED(405 , "http request method not supported"),

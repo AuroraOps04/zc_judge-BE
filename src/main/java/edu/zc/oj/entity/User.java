@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 
 /**
@@ -28,7 +28,7 @@ public class User {
     private String phone;
     private String studentNo;
     private Boolean isDisable;
-    private LocalDateTime createAt;
+    private Timestamp createAt;
     private Role role;
     private String avatar;
     private String sessionKey;

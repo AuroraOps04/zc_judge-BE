@@ -9,7 +9,6 @@ import edu.zc.oj.mapper.UserMapper;
 import edu.zc.oj.service.UserService;
 import edu.zc.oj.utils.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,9 +19,6 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
-
-    @Value("${password.salt}")
-    private String salt;
 
     @Override
     public User findByAccount(String account, String accountType) {

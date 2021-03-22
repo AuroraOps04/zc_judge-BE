@@ -36,6 +36,10 @@ public class ResultUtils {
         return new Response(ResponseCode.NOT_FOUND);
     }
 
+    public static Response unauthorized(){
+        return new Response(ResponseCode.Unauthorized);
+    }
+
     public static Response methodNotSupported() { return new Response(ResponseCode.METHOD_NOT_SUPPORTED); }
 
 }

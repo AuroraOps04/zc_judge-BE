@@ -4,6 +4,11 @@ spring:
     username: dba_zcoj001
     password: ${oj.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      write-dates-as-timestamps: false
 mybatis-plus:
   typeAliasesPackage: edu.zc.oj.entity
 logging:
