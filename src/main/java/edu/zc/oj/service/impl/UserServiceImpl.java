@@ -28,6 +28,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public LoginVo login(String account, String accountType, String password) {
         final User user = this.baseMapper.login(account, accountType, JWTUtils.encode(password));
+        if(null == user){
+            return null;
+        }
         String token;
         try {
             token = JWTUtils.getToken(user);

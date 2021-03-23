@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.zc.oj.mapper.ProblemMapper">
+    <resultMap id="baseProblem" type="edu.zc.oj.entity.Problem">
+        <id property="id" column="id"/>
+        <result property="difficulty" column="difficulty"/>
+        <collection property="tags" column="id" select="edu.zc.oj.mapper.TagMapper.getTagsByProblem"/>
+    </resultMap>
+
+</mapper>
