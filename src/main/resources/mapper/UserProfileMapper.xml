@@ -5,8 +5,14 @@
 
     <resultMap id="UserProfile" type="edu.zc.oj.entity.UserProfile">
         <id property="id" column="id"/>
-        <result column="id" property="id"/>
-
+        <result column="user_id" property="userId"/>
+        <result column="slogan" property="slogan"/>
+        <result column="github" property="github"/>
+        <result column="blog" property="blog"/>
+        <result column="major" property="major"/>
+        <result column="problem_status" property="problemStatus"/>
+        <result column="real_name" property="realName"/>
+        <result column="college" property="college"/>
     </resultMap>
 
     <select id="findUserProfile" resultType="edu.zc.oj.entity.UserProfile">

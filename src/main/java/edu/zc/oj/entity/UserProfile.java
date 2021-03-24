@@ -18,7 +18,7 @@ import lombok.ToString;
 @TableName(value = "user_profile", resultMap = "UserProfile")
 public class UserProfile {
     private Integer id;
-    private User user;
+    private Integer userId;
     private String slogan;
     private String github;
     private String blog;
