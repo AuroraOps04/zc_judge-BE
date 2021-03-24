@@ -19,8 +19,8 @@ import java.security.Timestamp;
 @NoArgsConstructor
 @TableName(value = "user_login", resultMap = "LoginLog")
 public class UserLogin {
-    private int id;
-    private int userId;
+    private Integer id;
+    private Integer userId;
     private Timestamp lastLogin;
     private String lastLoginIp;
     private String lastLoginEquipment;
