@@ -5,6 +5,23 @@
     <resultMap id="baseProblem" type="edu.zc.oj.entity.Problem">
         <id property="id" column="id"/>
         <result property="difficulty" column="difficulty"/>
+        <result property="title" column="title"/>
+        <result property="inputDescription" column="input_description"/>
+        <result property="outputDescription" column="output_description"/>
+        <result property="samples" column="samples"/>
+        <result property="hint" column="hint"/>
+        <result property="languages" column="languages"/>
+        <result property="template" column="template"/>
+        <result property="createAt" column="update_at"/>
+        <result property="timeLimit" column="time_limit"/>
+        <result property="memoryLimit" column="memory_limit"/>
+        <result property="visibleLimit" column="visible_limit"/>
+        <result property="shareSubmission" column="share_submission"/>
+        <result property="submissionNumber" column="submission_number"/>
+        <result property="acceptedNumber" column="accepted_number"/>
+        <result property="isPublic" column="is_public"/>
+        <result property="type" column="type"/>
+        <association property="owner" column="owner" javaType="edu.zc.oj.entity.User" select="edu.zc.oj.mapper.ProblemMapper.selectById"/>
         <collection property="tags" column="id" select="edu.zc.oj.mapper.TagMapper.getTagsByProblem"/>
     </resultMap>
 

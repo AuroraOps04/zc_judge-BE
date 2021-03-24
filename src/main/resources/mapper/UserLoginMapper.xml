@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.zc.oj.mapper.UserLoginMapper">
+    <resultMap id="LoginLog" type="edu.zc.oj.entity.UserLogin">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="LastLogin" column="LastLogin"/>
+        <result property="lastLoginIp" column="last_login_ip"/>
+        <result property="lastLoginEquipment" column="last_login_equipment"/>
+    </resultMap>
+    <select id="findLoginLogInfo" resultType="edu.zc.oj.entity.UserLogin">
+        select * from `user_login`
+    </select>
+</mapper>

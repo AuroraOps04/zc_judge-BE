@@ -12,5 +12,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class ProblemServiceImpl  extends ServiceImpl<ProblemMapper, Problem> implements ProblemService  {
+public class ProblemServiceImpl extends ServiceImpl<ProblemMapper, Problem> implements ProblemService  {
 }
