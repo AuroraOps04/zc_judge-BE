@@ -1,5 +1,6 @@
 package edu.zc.oj.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName(value = "user_profile", resultMap = "UserProfile")
 public class UserProfile {
     private Integer id;
     private User user;
